@@ -27,8 +27,7 @@ import { VideoService } from './shared/video.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule,
-  ],
+    HttpClientModule  ],
   providers: [YoutubeService, VideoService],
   bootstrap: [AppComponent]
 })

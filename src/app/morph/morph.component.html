@@ -1,6 +1,6 @@
 <div class="row">
     <button (click)="start()" class="btn btn-primary">Play</button>
-    <button (click)="snap()" id="btn btn-primary">Snap Photo</button>              
+    <button (click)="snap()" class="btn btn-info">Snap Photo</button>              
   </div>
 
   <div class="row">
@@ -12,7 +12,15 @@
           <video #resultVideoElement></video>                                                          
         </h3>
         </div>
-    </div>
+        <div  [class]="getSnapStyle()">
+          <h3>What you like the most</h3>
+          <input type="radio"  [(ngModel)]="hobby" value="Surfing">Surfing<br>
+          <input type="radio" [(ngModel)]="hobby" value="SkyDiving">SkyDiving<br>
+          <input type="radio" [(ngModel)]="hobby" value="Paragliding">Paragliding
+      </div>
+      </div>
   </div>
 
+
+ 
 

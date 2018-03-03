@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 @Component({
   selector: 'app-morph',
@@ -16,7 +18,8 @@ export class MorphComponent implements OnInit {
   canvas: any;
   resultVideo: any;
   videoRunning: boolean = true;
-  isValid = true;  
+  isValid = true;
+  hobby: string;
 
   ngOnInit() {
     this.video = this.videoElement.nativeElement;
@@ -67,7 +70,7 @@ export class MorphComponent implements OnInit {
     this.video.pause(); 
     this.isValid = false;
 
-     this.resultVideo.src = "http://127.0.0.1:8000/output3.mp4";
+     this.resultVideo.src = "http://127.0.0.1:8000/"+this.hobby+".mp4";
      this.resultVideo.play();
     
   }
