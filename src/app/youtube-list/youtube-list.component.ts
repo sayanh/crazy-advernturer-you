@@ -21,4 +21,14 @@ export class YoutubeListComponent implements OnInit {
         alert(err.message);
       });
   }
+  ;
+  
+
+   onRemoveTag(e) {
+  console.log(e, e.detail);
+}
+
+onAddTag(e) {
+  console.log(e, e.detail);
+}
 }
