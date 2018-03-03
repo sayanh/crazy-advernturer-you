@@ -5,15 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { MorphComponent } from './app/morph/morph.component';
-import { LoginComponent } from './app/login/login.component';
+import { MorphComponent } from './morph/morph.component';
+import { LoginComponent } from './login/login.component';
+import { YoutubeService } from './shared/youtube.service';
+import { YoutubeListComponent } from './youtube-list/youtube-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MorphComponent,
-    LoginComponent
+    LoginComponent,
+    YoutubeListComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { LoginComponent } from './app/login/login.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [YoutubeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
