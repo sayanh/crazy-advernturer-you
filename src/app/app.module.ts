@@ -9,12 +9,9 @@ import { MorphComponent } from './morph/morph.component';
 import { LoginComponent } from './login/login.component';
 import { YoutubeService } from './shared/youtube.service';
 import { YoutubeListComponent } from './youtube-list/youtube-list.component';
-<<<<<<< HEAD
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-=======
 import { VideoComponent } from './video/video.component';
 import { VideoService } from './shared/video.service';
->>>>>>> temp
 
 
 @NgModule({
