@@ -9,15 +9,19 @@ import { Router } from '@angular/router';
 export class MorphComponent implements OnInit {
   @ViewChild('videoElement') videoElement: any;
   @ViewChild('canvasElement') canvasElement: any;
+  @ViewChild('resultVideoElement') resultVideoElement: any;
+
 
   video: any;
   canvas: any;
+  resultVideo: any;
   videoRunning: boolean = true;
   isValid = true;  
 
   ngOnInit() {
     this.video = this.videoElement.nativeElement;
     this.canvas = this.canvasElement.nativeElement;
+    this.resultVideo = this.resultVideoElement.nativeElement;
     this.start();
   }
 
@@ -60,8 +64,12 @@ export class MorphComponent implements OnInit {
     const context = this.canvas.getContext('2d');
     context.drawImage(this.video, 0, 0, 640, 480);
     this.videoRunning = false;
-    this.video.pause();
+    this.video.pause(); 
     this.isValid = false;
+
+     this.resultVideo.src = "http://127.0.0.1:8000/output3.mp4";
+     this.resultVideo.play();
+    
   }
 
   getStyle() {
