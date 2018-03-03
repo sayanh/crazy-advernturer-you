@@ -106,4 +106,8 @@ export class MorphComponent implements OnInit {
   this.resultVideoRunning = true;
   }
 
+  share() {
+    console.log("Warning!!!!! You are living extreme!");
+  }
+
 }
