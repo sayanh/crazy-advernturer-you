@@ -18,8 +18,9 @@ export class MorphComponent implements OnInit {
   canvas: any;
   resultVideo: any;
   videoRunning: boolean = true;
+  resultVideoRunning: boolean = true;  
   isValid = true;
-  hobby: string;
+  hobby: string = "Surfing";
 
   ngOnInit() {
     this.video = this.videoElement.nativeElement;
@@ -34,6 +35,7 @@ export class MorphComponent implements OnInit {
   start() {
     this.initCamera({ video: true, audio: false });
     this.videoRunning = true;
+    this.resultVideoRunning = false;    
   }
 
    sound() {
@@ -69,10 +71,6 @@ export class MorphComponent implements OnInit {
     this.videoRunning = false;
     this.video.pause(); 
     this.isValid = false;
-
-     this.resultVideo.src = "http://127.0.0.1:8000/"+this.hobby+".mp4";
-     this.resultVideo.play();
-    
   }
 
   getStyle() {
@@ -84,11 +82,28 @@ export class MorphComponent implements OnInit {
   }
 
   getSnapStyle() {
-    if(this.videoRunning) {
+    if(this.resultVideoRunning){
+      return "elem_hide";      
+    }
+    else if(this.videoRunning ) {
       return "elem_hide";
     } else {
       return "elem_show";
     }
+  }
+
+  getResultStyle() {
+    if(this.resultVideoRunning) {
+      return "elem_show";
+    } else {
+      return "elem_hide";
+    }
+  }
+
+  liveExtreme(){
+    this.resultVideo.src = "http://127.0.0.1:8000/"+this.hobby+".mp4";
+    this.resultVideo.play();
+  this.resultVideoRunning = true;
   }
 
 }

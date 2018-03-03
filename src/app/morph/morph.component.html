@@ -1,6 +1,6 @@
 <div class="row">
     <button (click)="start()" class="btn btn-primary">Play</button>
-    <button (click)="snap()" class="btn btn-info">Snap Photo</button>              
+    <button (click)="snap()" class="btn btn-info">Live Exteme!</button>              
   </div>
 
   <div class="row">
@@ -9,16 +9,18 @@
         <h3>
           <video #videoElement [class]="getStyle()"></video>                                                
           <canvas #canvasElement width="640" height="480" [class]="getSnapStyle()"></canvas>                    
-          <video #resultVideoElement></video>                                                          
+          <video #resultVideoElement  [class]="getResultStyle()"></video>                                                          
         </h3>
         </div>
         <div  [class]="getSnapStyle()">
           <h3>What you like the most</h3>
-          <input type="radio"  [(ngModel)]="hobby" value="Surfing">Surfing<br>
-          <input type="radio" [(ngModel)]="hobby" value="SkyDiving">SkyDiving<br>
-          <input type="radio" [(ngModel)]="hobby" value="Paragliding">Paragliding
+          <input type="radio"  [(ngModel)]="hobby"  placeholder="name" value="Surfing">Surfing<br>
+          <input type="radio" [(ngModel)]="hobby" placeholder="name" value="SkyDiving">SkyDiving<br>
+          <input type="radio" [(ngModel)]="hobby" placeholder="name" value="Paragliding">Paragliding
       </div>
-      </div>
+      <button (click)="liveExtreme()" class="btn btn-info" [class]="getSnapStyle()">Live Extreme!</button>                    
+      <button (click)="liveExtreme()" class="btn btn-info" [class]="getResultStyle()">Share!</button>                          
+    </div>
   </div>
 
 
