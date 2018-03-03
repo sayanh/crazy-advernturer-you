@@ -9,6 +9,7 @@ import { MorphComponent } from './morph/morph.component';
 import { LoginComponent } from './login/login.component';
 import { YoutubeService } from './shared/youtube.service';
 import { YoutubeListComponent } from './youtube-list/youtube-list.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { YoutubeListComponent } from './youtube-list/youtube-list.component';
     YoutubeListComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     AppRoutingModule,
