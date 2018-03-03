@@ -35,7 +35,8 @@ export class MorphComponent implements OnInit {
   start() {
     this.initCamera({ video: true, audio: false });
     this.videoRunning = true;
-    this.resultVideoRunning = false;    
+    this.resultVideoRunning = false;
+    resultVideo.pause(); 
   }
 
    sound() {
@@ -106,7 +107,7 @@ export class MorphComponent implements OnInit {
   this.resultVideoRunning = true;
   }
 
-  share() {
+  doShare() {
     console.log("Warning!!!!! You are living extreme!");
   }
 

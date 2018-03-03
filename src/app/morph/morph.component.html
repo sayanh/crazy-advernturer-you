@@ -7,9 +7,9 @@
     <div class="col-md-12">
       <div class="text-center">
         <h3>
-          <video #videoElement [class]="getStyle()"></video>                                                
+          <video #videoElement [class]="getStyle()" ></video>                                                
           <canvas #canvasElement width="640" height="480" [class]="getSnapStyle()"></canvas>                    
-          <video #resultVideoElement  [class]="getResultStyle()"></video>                                                          
+          <video #resultVideoElement  [class]="getResultStyle()" controls></video>                                                          
         </h3>
         </div>
         <div  [class]="getSnapStyle()">
