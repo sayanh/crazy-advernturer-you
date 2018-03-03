@@ -4,7 +4,7 @@ import { MorphComponent } from './morph/morph.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '', redirectTo: '/morph', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'morph', component: MorphComponent },
 ]
