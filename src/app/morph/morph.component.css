@@ -6,3 +6,11 @@
     display: none;
 }
 
+.share_button {
+    width: 50%;
+    background-color: green;
+    display: block;
+    color: white;
+    height: 70px;
+}
+

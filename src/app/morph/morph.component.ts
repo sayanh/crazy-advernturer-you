@@ -36,7 +36,7 @@ export class MorphComponent implements OnInit {
     this.initCamera({ video: true, audio: false });
     this.videoRunning = true;
     this.resultVideoRunning = false;
-    resultVideo.pause(); 
+    this.resultVideo.pause(); 
   }
 
    sound() {
@@ -96,6 +96,14 @@ export class MorphComponent implements OnInit {
   getResultStyle() {
     if(this.resultVideoRunning) {
       return "elem_show";
+    } else {
+      return "elem_hide";
+    }
+  }
+
+  getShareStyle() {
+    if(this.resultVideoRunning) {
+      return "share_button";
     } else {
       return "elem_hide";
     }
