@@ -33,3 +33,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Motivation
+- Video processing from youtube and replace the existing face with a trained face sample
+
+For more info, please check [here](https://github.com/DerWaldi/youtube-video-face-swap)
+- Docker image available : `shazra/youtube-facemorph-engine` which contains code and env for video processing
