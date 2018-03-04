@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @Component({
